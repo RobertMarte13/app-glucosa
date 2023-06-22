@@ -1,4 +1,4 @@
-import "../../style/btn.scss";
+import '../../style/btn.scss'
 
 // eslint-disable-next-line react/prop-types
 const TodoInfo = ({ item, setResponse2 }) => {
@@ -23,9 +23,10 @@ const TodoInfo = ({ item, setResponse2 }) => {
         X
       </button>
     </div>
-  );
-};
+  )
+}
 
+// Estilos en linea
 const styles = {
   component: {
     display: "flex",
@@ -52,6 +53,6 @@ const styles = {
     color: "white",
     cursor: "pointer",
   }
-};
+}
 
-export default TodoInfo;
+export default TodoInfo

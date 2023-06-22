@@ -1,11 +1,17 @@
-import { useState } from "react"
-import { createRegister } from "../../service/service"
+import { useState } from 'react'
+
+// API
+import { createRegister } from '../../service/service'
+
+// Estilos
 import '../../style/formulario.scss'
 
 const Registro = () => {
 
+  // Estado
   const [register, setRegister] = useState(null)
   
+  // Funcion que crea los registros para enviarlos a la res api
   const handleSubmit = (e) => {
     e.preventDefault()
     setRegister({
@@ -17,17 +23,21 @@ const Registro = () => {
     })
   }
   
+  // Funcion que manda el json para crear el registro en la base de datos
   function createRes() {
     if (register !== null) {
+      
+      if (register.fecha.length === 9 || register.fecha.length === 7) {
+        return window.alert('La fecha que introdusiste no es valida, prueba con este formato 00/00/00')
+      }
+
       createRegister(register)
       window.alert('La creacion del registro a sido exitosa!')
+      
     } else {
       window.alert('Porfavor vuelve a hacer click')
     }
-    // console.log(JSON.stringify(register))
   }
-
-
   
   return (
     <div>
@@ -38,9 +48,9 @@ const Registro = () => {
         <input type="text" name='nivelazucar1'/>
         <label>medicamento</label>
         <input type="text" name='medicamento1'/>
-        <label>nivel de azucar 1</label>
+        <label>nivel de azucar 2</label>
         <input type="text" name='nivelazucar2'/>
-        <label>medicamento</label>
+        <label>medicamento2</label>
         <input type="text" name='medicamento2'/>
         <button className="btn-submit" type="submit" onClick={() => createRes()}>Craer Registro</button>
       </form>

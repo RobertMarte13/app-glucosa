@@ -3,6 +3,8 @@ import '../../style/btn.scss'
 
 // eslint-disable-next-line react/prop-types
 const TodoRegister = ({ response, oneinfo }) => {
+
+  // Funcion que remueve o elimina del registro cualquier informacion
   function removeRegister(id) {
     console.log(id)
     deleteRegister(id)
@@ -24,6 +26,7 @@ const TodoRegister = ({ response, oneinfo }) => {
   );
 }
 
+// Estilos en linea
 const styles = {
   component: {
     display: "flex",
@@ -47,7 +50,8 @@ const styles = {
     width: 70
   },
   title: {
-    paddingLeft: 10
+    paddingLeft: 10,
+    fontSize: 16
   }
 
 }

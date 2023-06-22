@@ -1,19 +1,24 @@
-import { Route,  Routes } from "react-router-dom"
-import Container from "./components/container/container"
-import NavBar from "./components/pure/NavBar"
-import Registro from "./components/pure/registro"
-import UpdateRegister from "./components/pure/UpdateRegister"
+import { Route,  Routes } from 'react-router-dom'
 
+// Componentes
+import Container from './components/container/container'
+import NavBar from './components/pure/NavBar'
+import Registro from './components/pure/registro'
+import UpdateRegister from './components/pure/UpdateRegister'
+
+// Importaciones de estilos
 import './style/navbar.scss'
 
 function App() {
 
   return (
     <div>
+      {/* Navegador */}
       <nav className='navbar' style={styles.navbar}>
         <NavBar />
       </nav>
 
+      {/* Rutas */}
       <Routes>
         <Route path='/' element={<Container />}/>
         <Route path='/crearregistro' element={<Registro />}/>
@@ -23,6 +28,7 @@ function App() {
   )
 }
 
+// Estilos en linea
 const styles = {
   navbar: {
     background: '#A0B4A3',

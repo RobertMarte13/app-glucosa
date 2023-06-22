@@ -1,12 +1,18 @@
-import { useState } from "react"
-import { updateRegisterAPI } from "../../service/service" 
+import { useState } from 'react'
+
+// API
+import { updateRegisterAPI } from '../../service/service'
+
+// Estilos
 import '../../style/formulario.scss'
 
 const UpdateRegister = () => {
 
+  // Estados
   const [update, setUpdate] = useState(null)
   const [id, setId] = useState(null)
   
+  // Funcion que actualiza cuanquier informacion del registro
   const handleSubmit2 = (e) => {
     e.preventDefault()
     setUpdate({
@@ -21,6 +27,7 @@ const UpdateRegister = () => {
     })
   }
 
+  // Funcion que manda la actualizacion del registro a la base de datos
   function updateRes() {
     if (update !== null) {
       updateRegisterAPI(update, parseInt(id.id))
@@ -42,9 +49,9 @@ const UpdateRegister = () => {
         <input type="text" name='nivelazucar1'/>
         <label>medicamento</label>
         <input type="text" name='medicamento1'/>
-        <label>nivel de azucar 1</label>
+        <label>nivel de azucar 2</label>
         <input type="text" name='nivelazucar2'/>
-        <label>medicamento</label>
+        <label>medicamento 2</label>
         <input type="text" name='medicamento2'/>
         <button className="btn-submit" type="submit" onClick={() => updateRes()}>Creando Actualizacion</button>
       </form>

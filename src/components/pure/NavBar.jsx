@@ -1,11 +1,6 @@
-import { NavLink } from "react-router-dom";
-import { oneResponse } from "../../service/service";
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
-
-  function getRespOne(id) {
-    oneResponse(id).then((res) => console.log(res));
-  }
 
   return (
     <ul>
@@ -22,7 +17,6 @@ const NavBar = () => {
       <li>
         <NavLink
           to="/crearregistro"
-          onClick={() => getRespOne(2)}
           className={({ isActive }) =>
             `${isActive ? "btn-primary" : "btn-danger"}`
           }
@@ -41,7 +35,7 @@ const NavBar = () => {
         </NavLink>
       </li>
     </ul>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

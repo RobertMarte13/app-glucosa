@@ -1,21 +1,28 @@
-import { useEffect, useState } from "react";
-import { APIrequest, oneResponse } from "../../service/service";
-import TodoRegister from "../pure/TodoRegister";
-import TodoInfo from "../pure/TodoInfo";
+import { useEffect, useState } from 'react'
+
+// API
+import { APIrequest, responseInfo } from '../../service/service'
+
+// Componentes
+import TodoRegister from '../pure/TodoRegister'
+import TodoInfo from '../pure/TodoInfo'
+
 
 const Container = () => {
-  const [response, setResponse] = useState(null);
-  const [response2, setResponse2] = useState([]);
+
+  // Estados
+  const [response, setResponse] = useState(null)
+  const [response2, setResponse2] = useState([])
 
   useEffect(() => {
+    // Respuesta de la API que me devuelve todas las informaciones.
     APIrequest().then((res) => setResponse(res));
-  }, []);
+  }, [])
 
+  // Funcion que me devuelve 
   function oneInfo(id) {
-    oneResponse(id).then((res) => setResponse2(res));
+    responseInfo(id).then((res) => setResponse2(res));
   }
-
-  console.log(response2);
 
   return (
     <div>
@@ -37,9 +44,10 @@ const Container = () => {
         }
       </div>
     </div>
-  );
-};
+  )
+}
 
+// Estilos en linea
 const styles = {
   header: {
     padding: 15,
@@ -61,4 +69,4 @@ const styles = {
   }
 }
 
-export default Container;
+export default Container

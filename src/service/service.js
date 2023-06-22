@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// Funcion que obtiene todos los registros de la RES API
 export const APIrequest = async () => {
   try {
     const response = await axios.get(
@@ -11,8 +12,8 @@ export const APIrequest = async () => {
   }
 };
 
-
-export const oneResponse = async (id) => {
+// Funcion que me deja ver informacion de un registro por medio de su id
+export const responseInfo = async (id) => {
   try {
     const response = await axios.get(
       `https://api-glucosa-production.up.railway.app/register/${id}`
@@ -23,6 +24,7 @@ export const oneResponse = async (id) => {
   }
 };
 
+// Funcion que me permite Crear registro en la base de datos
 export const createRegister = async (register) => {
   try {
 
@@ -39,6 +41,7 @@ export const createRegister = async (register) => {
   }
 }
 
+// Funcion que me permite actualizar un dato
 export const updateRegisterAPI = async (update, id) => {
   try {
 
@@ -57,6 +60,7 @@ export const updateRegisterAPI = async (update, id) => {
   }
 }
 
+// Funcion que me permite eliminar un registro de la base de datos
 export const deleteRegister = async (id) => {
   try {
     await axios.delete(
