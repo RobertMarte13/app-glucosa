@@ -1,0 +1,28 @@
+$white: white;
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+  padding: 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: $white;
+  transition: all .3s ease-in-out;
+}
+
+.btn-primary {
+  color: rgb(66, 85, 55);
+}
+
+.btn-danger {
+  color: white;
+
+}

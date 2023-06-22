@@ -1,0 +1,5 @@
+Api:
+https://api-glucosa-production.up.railway.app/ get 
+https://api-glucosa-production.up.railway.app/register post
+https://api-glucosa-production.up.railway.app/register/:id put, delete, get
+https://api-glucosa-production.up.railway.app/register/:id?queryparams patch
