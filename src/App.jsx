@@ -7,6 +7,7 @@ import Registro from './components/pure/registro'
 import UpdateRegister from './components/pure/UpdateRegister'
 
 // Importaciones de estilos
+import './App.scss'
 import './style/navbar.scss'
 
 function App() {

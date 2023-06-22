@@ -33,3 +33,9 @@ input {
 .btn-submit:hover {
     box-shadow: 0 0 10px rgba(0,0,0, .2);
 }
+
+@media screen and (max-width:400px) {
+    .btn-submit {
+        font-size: medium;
+    }
+}

@@ -1,10 +1,21 @@
-
 .btnInfo {
-  background: #A0B4A3;
+  background: #a0b4a3;
   border: none;
   border-radius: 2px;
   font-weight: bold;
   font-size: 20px;
+  color: white;
+  cursor: pointer;
+  height: 40px;
+  width: 70px;
+}
+
+.btnRemove {
+  height: 55px;
+  width: 110px;
+  border: none;
+  background: #db422e;
+  font-size: 24px;
   color: white;
   cursor: pointer;
 }
@@ -14,9 +25,41 @@
 }
 
 #btnBack {
-  background: #db422e
+  background: #db422e;
+  height: 55px;
+  width: 100%;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
 }
 
 #btnBack:hover {
   background: #ff4d36;
+}
+
+.btnRemove:hover {
+  background: #ee4933;
+}
+
+// Media queries
+@media screen and (max-width: 400px) {
+  .btnInfo {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .btnRemove {
+    width: 100%;
+    font-size: 18px;
+    height: 40px;
+  }
+
+  #btnBack {
+    width: 100%;
+    font-size: 18px;
+    height: 40px;
+  }
 }

@@ -26,10 +26,10 @@ const Container = () => {
 
   return (
     <div>
-      <div className="box-header" style={styles.header}>
+      <div className="box-header">
         <h1 className="title">Registro Glucosa</h1>
       </div>
-      <div style={styles.registro}>
+      <div className='content-register'>
         <TodoRegister response={response} oneinfo={oneInfo} />
       </div>
       <div>
@@ -45,28 +45,6 @@ const Container = () => {
       </div>
     </div>
   )
-}
-
-// Estilos en linea
-const styles = {
-  header: {
-    padding: 15,
-    margin: 10,
-    color: '#242424',
-    background: '#f0f0f0',
-    textAlign: 'center',
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  registro: {
-    color: '#242424',
-    textAlign: 'left',
-    fontSize: 20,
-    fontWeight: 'bold',
-    width: '100%',
-    marginTop: 10,
-    padding: 10,
-  }
 }
 
 export default Container
